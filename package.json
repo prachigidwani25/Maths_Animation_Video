@@ -1,0 +1,25 @@
+{
+  "name": "m3-gaussian-elimination-animation",
+  "version": "1.0.0",
+  "description": "Project Gauss — The Ultimate Mathematical Animation Film explaining Gaussian Elimination in Chromatic Swiss style",
+  "scripts": {
+    "start": "remotion studio",
+    "build": "remotion render src/index.ts ProjectGauss renders/ProjectGauss.mp4",
+    "render:scene4": "remotion render src/index.ts Scene04 renders/Scene04_Prototype.mp4",
+    "still:scene4": "remotion still src/index.ts Scene04 renders/scene04_frame1000.png --frame=1000",
+    "test": "echo \"Ready for QA validation\""
+  },
+  "dependencies": {
+    "@remotion/bundler": "^4.0.260",
+    "@remotion/cli": "^4.0.260",
+    "@remotion/shapes": "^4.0.260",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "remotion": "^4.0.260"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.7.0"
+  }
+}

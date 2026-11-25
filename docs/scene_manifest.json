@@ -1,0 +1,78 @@
+{
+  "project": "Gaussian Elimination Voiceover",
+  "script_source": "final_script_2.md",
+  "voice_profile": "prachi_voice.qvoice",
+  "model_checkpoint": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-bf16",
+  "total_scenes": 6,
+  "total_words": 960,
+  "total_audio_duration_seconds": 382.43,
+  "total_generation_time_seconds": 652.56,
+  "scenes": [
+    {
+      "scene_number": 1,
+      "title": "The Challenge of Linear Systems",
+      "timestamp_target": "0:00 \u2013 0:35",
+      "text": "Imagine facing three equations, containing three unknown variables: x, y, and z. Each equation gives us a different condition, but all three must be satisfied simultaneously.\n\nOur challenge is to discover one combination of values that makes every equation true.\n\nAt first, this looks like a complicated puzzle. Guessing is unreliable. Substituting one equation into another can quickly become messy. And as the number of variables increases, the calculations become even more difficult to manage.\n\nBut what if we could simplify the entire system without changing its solution?\n\nWhat if, instead of fighting the complexity, we could systematically transform it?\n\nThat is exactly what Gaussian elimination allows us to do.",
+      "word_count": 110,
+      "filename": "output/scenes/scene_01.wav",
+      "duration": 46.627,
+      "sample_rate": 24000,
+      "status": "COMPLETED"
+    },
+    {
+      "scene_number": 2,
+      "title": "The Augmented Matrix",
+      "timestamp_target": "0:35 \u2013 1:10",
+      "text": "The first step is to change how we represent the problem.\n\nInstead of repeatedly writing variable names and equations, we focus on the numerical relationships that actually matter.\n\nConsider our system of three equations. The numbers multiplying x, y, and z are called coefficients. The numbers on the right-hand side are our constants.\n\nWe arrange these coefficients into rows and columns, keeping the constants separated by a vertical dividing line.\n\nThis structure is called an augmented matrix.\n\nEach row represents one original equation, while each column represents one variable.\n\nNotice something important: we have not changed the mathematics. We have simply given the system a more organized representation.\n\nAnd this makes the next steps much easier.",
+      "word_count": 116,
+      "filename": "output/scenes/scene_02.wav",
+      "duration": 47.95,
+      "sample_rate": 24000,
+      "status": "COMPLETED"
+    },
+    {
+      "scene_number": 3,
+      "title": "Elementary Row Operations",
+      "timestamp_target": "1:10 \u2013 1:55",
+      "text": "Now comes the interesting part. What are we actually allowed to do to this matrix?\n\nWe have exactly three elementary row operations, and each one preserves the solution of the original system.\n\nFirst, we can interchange any two rows. Changing the order of equations does not change the conditions they represent.\n\nSecond, we can multiply an entire row by any non-zero number. If both sides of an equation are multiplied by the same value, the equality remains valid.\n\nAnd third, we can add or subtract a multiple of one row from another row. This allows us to eliminate unwanted coefficients while preserving mathematical equivalence.\n\nThink of these operations as carefully controlled transformations. We are changing the appearance of the system, not the answers it produces.\n\nBecause every operation is reversible, we can simplify the matrix while keeping its original solution intact.\n\nThese three moves are the foundation of Gaussian elimination.",
+      "word_count": 150,
+      "filename": "output/scenes/scene_03.wav",
+      "duration": 57.47,
+      "sample_rate": 24000,
+      "status": "COMPLETED"
+    },
+    {
+      "scene_number": 4,
+      "title": "Systematic Elimination",
+      "timestamp_target": "1:55 \u2013 3:40",
+      "text": "Now, let's put everything together and solve our system.\n\nOur objective is to reach row echelon form. In this structure, the leading non-zero entries move progressively to the right as we move down the rows. Everything below each pivot becomes zero, creating a staircase pattern.\n\nLet's begin with our first pivot: the one in the top-left corner.\n\nThis leading entry will help us eliminate the numbers beneath it in the first column.\n\nTo remove the two in row two, we perform our first transformation: replace row two with row two minus twice row one.\n\nLet's examine the arithmetic.\n\nTwo minus two gives zero. One minus two gives negative one. Three minus two gives one. And thirteen minus twelve leaves one.\n\nOur first elimination is complete. The entry below the pivot has become zero.\n\nNext, we eliminate the one in row three. We subtract row one from row three.\n\nOne minus one gives zero. Three minus one gives two. Two minus one gives one. And thirteen minus six gives seven.\n\nNow, look at the first column. Both entries beneath our first pivot are zero. We have successfully cleared the entire column.\n\nBut we are not finished.\n\nWe move one position down and one position to the right, arriving at our second pivot: negative one.\n\nOur objective is to eliminate the two directly beneath it in row three.\n\nFor this, we replace row three with row three plus two times row two.\n\nTwo plus twice negative one gives zero. One plus twice one gives three. And seven plus twice one gives nine.\n\nAnd just like that, another entry becomes zero.\n\nLook at the transformation we have achieved.\n\nThe matrix now has a staircase arrangement of leading entries, with zeros below the pivots. This is precisely the structure we wanted: row echelon form.\n\nNotice how each operation had a specific purpose. We did not randomly manipulate numbers. We used each pivot strategically to eliminate the entries beneath it.\n\nThe complicated system has now become a much simpler triangular system.\n\nAnd that changes everything.",
+      "word_count": 340,
+      "filename": "output/scenes/scene_04.wav",
+      "duration": 128.25,
+      "sample_rate": 24000,
+      "status": "COMPLETED"
+    },
+    {
+      "scene_number": 5,
+      "title": "Unraveling the Solution",
+      "timestamp_target": "3:40 \u2013 4:35",
+      "text": "We have reached the triangular structure. Now, instead of eliminating more variables, we can work backwards to uncover their values.\n\nThis final stage is called back-substitution.\n\nWe always begin with the bottom row because it contains the fewest unknowns.\n\nOur third row gives us three z equals nine. Dividing both sides by three, we immediately discover that z equals three.\n\nOne variable solved.\n\nNow, move one row upwards. The second row gives us negative y plus z equals one.\n\nWe already know that z equals three. Substituting this value gives negative y plus three equals one.\n\nRearranging, negative y equals negative two. Therefore, y equals two.\n\nFinally, we move to the first row. It gives us x plus y plus z equals six.\n\nSubstituting our known values, we get x plus two plus three equals six. Therefore, x equals one.\n\nAnd there we have it.\n\nOur complete solution is x equals one, y equals two, and z equals three.\n\nSubstituting these values into the original equations confirms that all three equations are satisfied.\n\nThe system is solved.",
+      "word_count": 177,
+      "filename": "output/scenes/scene_05.wav",
+      "duration": 72.09,
+      "sample_rate": 24000,
+      "status": "COMPLETED"
+    },
+    {
+      "scene_number": 6,
+      "title": "The Art of Simplification",
+      "timestamp_target": "4:35 \u2013 5:00",
+      "text": "Gaussian elimination is more than a sequence of calculations. It is a systematic way of turning complexity into clarity.\n\nRepresent the system as an augmented matrix. Use elementary row operations to reach row echelon form. Then apply back-substitution to uncover the unknowns.\n\nOne transformation at a time, a complicated system becomes manageable.\n\nThat is the elegance of Gaussian elimination.\n\nLinear systems, simplified with precision. Mastered with Gauss.",
+      "word_count": 67,
+      "filename": "output/scenes/scene_06.wav",
+      "duration": 30.04,
+      "sample_rate": 24000,
+      "status": "COMPLETED"
+    }
+  ]
+}

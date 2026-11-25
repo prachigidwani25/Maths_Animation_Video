@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+
+# OS & Editor
+.DS_Store
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Environment & Secrets
+.env
+.env.*
+*.pem
+*.key
+
+# Build & Remotion Cache
+dist/
+build/
+out/
+.remotion/
+
+# Large Rendered Video & Intermediate Media (hosted on Google Drive)
+renders/
+public/*.wav
+public/audio/
+Updated_Audio.wav
+final_narration.wav
+snippet.wav
+scratch_transcribe.swift
+
+# Local Tooling & Agent Skills
+tooling/
+.agents/
